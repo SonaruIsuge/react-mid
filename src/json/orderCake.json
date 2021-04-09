@@ -1,0 +1,45 @@
+[
+    {
+      "flavor":"BLUEBERRY",
+      "image":"",
+      "price": 110,
+      "render":1,
+      "color1": "#FF9D9D",
+      "color2": "none",
+      "decoration":1,
+      "massage":"HAPPY BIRTHDAY"
+    },
+    {
+      "flavor":"LEMON",
+      "image":"",
+      "price": 100,
+      "render":1,
+      "color1": "#FF9D9D",
+      "color2": "none",
+      "decoration":1,
+      "massage":"HAPPY BIRTHDAY"
+    },
+    {
+      "flavor":"STRAWBERRY",
+      "image":"",
+      "price": 110,
+      "render":1,
+      "color1": "#FF9D9D",
+      "color2": "none",
+      "decoration":1,
+      "massage":"HAPPY BIRTHDAY"
+
+    },
+    {
+      "flavor":"APPLE",
+      "image":"",
+      "price": 100,
+      "render":1,
+      "color1": "#FF9D9D",
+      "color2": "none",
+      "decoration":1,
+      "massage":"HAPPY BIRTHDAY"
+
+    }
+  ]
+  

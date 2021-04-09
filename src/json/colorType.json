@@ -1,0 +1,10 @@
+[
+    {
+        "type":"mix",
+        "price":20
+    },
+    {
+        "type":"single",
+        "price":0
+    }
+]
