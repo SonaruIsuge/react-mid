@@ -1,0 +1,20 @@
+[
+    {
+        "category":"cake",
+        "flavor":"BLUEBERRY",
+        "price":120,
+        "image":""
+    },
+    {
+        "category":"tart",
+        "flavor":"LEMON",
+        "price":100,
+        "image":""
+    },
+    {
+        "category":"browine",
+        "flavor":"BLUEBERRY",
+        "price":80,
+        "image":""
+    }
+]
