@@ -33,8 +33,8 @@ export default function NavBar() {
                 key={"left"}
                 width={400}
                 zIndex={99}
-                bodyStyle={{ backgroundColor: "#ffd1bd" }}
-                headerStyle={{ backgroundColor: "#ffd1bd", color: "#fff" }}
+                bodyStyle={{ backgroundColor: "#FAA581" }}
+                headerStyle={{ backgroundColor: "#FAA581", color: "#fff" }}
             >
                 <NavItem onClose={handleCloseDrawer} to='/home' className='nav-item' activeClassName='nav-item--active'>
                     HOME

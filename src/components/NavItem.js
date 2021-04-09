@@ -15,7 +15,7 @@ export default function NavItem(props){
     }
 
     return(
-        <Link to={to} className="nav-link">
+        <Link to={to} onClick={onClick} className="nav-link">
             <div onClick={onClick} className={`${state.navBar.activeItem === to ? "nav-item-circle" : "nav-item-circle--hide"}`}></div>
             <div
                 onClick={onClick}
