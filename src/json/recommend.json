@@ -1,17 +1,20 @@
 [
     {
+        "id":"eirvm3",
         "category":"cake",
         "flavor":["BLUEBERRY","APPLE","LEMON","STRAWBERRY"],
         "price":100,
         "image":""
     },
     {
+        "id":"kg9efb",
         "category":"tart",
         "flavor":["BLUEBERRY","LEMON"],
         "price":90,
         "image":""
     },
     {
+        "id":"nnjsu5",
         "category":"browine",
         "flavor":["BLUEBERRY","APPLE","STRAWBERRY"],
         "price":60,
