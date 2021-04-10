@@ -2,14 +2,14 @@
     {
       "id":"789yu6",
       "flavor":"BLUEBERRY",
-      "image":"",
+      "image":"../images/flavor-blueberry",
       "price": 130
 
     },
     {
       "id":"6879op",
       "flavor":"LEMON",
-      "image":"",
+      "image":"../images/flavor-lemon",
       "price": 120
   
     }

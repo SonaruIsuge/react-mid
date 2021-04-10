@@ -2,19 +2,19 @@
     {
       "id":"123kg8",
       "flavor":"BLUEBERRY",
-      "image":"",
+      "image":"../images/flavor-blueberry",
       "price": 100
     },
     {
       "id":"8995r9",
       "flavor":"STRAWBERRY",
-      "image":"",
+      "image":"../images/flavor-strawberry",
       "price": 90
     },
     {
       "id":"5ssstr",
       "flavor":"APPLE",
-      "image":"",
+      "image":"../images/flavor-apple",
       "price": 80
       
 

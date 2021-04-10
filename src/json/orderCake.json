@@ -2,7 +2,7 @@
     {
       "id":"2b1kg8",
       "flavor":"BLUEBERRY",
-      "image":"",
+      "image":"../images/flavor-blueberry",
       "price": 110,
       "render":1,
       "color1": "#FF9D9D",
@@ -13,7 +13,7 @@
     {
       "id":"6553n8",
       "flavor":"LEMON",
-      "image":"",
+      "image":"../images/flavor-lemon",
       "price": 100,
       "render":1,
       "color1": "#FF9D9D",
@@ -24,7 +24,7 @@
     {
       "id":"8z15tl",
       "flavor":"STRAWBERRY",
-      "image":"",
+      "image":"../images/flavor-strawberry",
       "price": 110,
       "render":1,
       "color1": "#FF9D9D",
@@ -36,7 +36,7 @@
     {
       "id":"bh5rcu",
       "flavor":"APPLE",
-      "image":"",
+      "image":"../images/flavor-apple",
       "price": 100,
       "render":1,
       "color1": "#FF9D9D",
