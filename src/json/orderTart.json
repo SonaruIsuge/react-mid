@@ -1,0 +1,25 @@
+[
+    {
+      "id":"789yu6",
+      "flavor":"BLUEBERRY",
+      "image":"",
+      "price": 130,
+      "render":1,
+      "color1": "#FF9D9D",
+      "color2": "none",
+      "decoration":1,
+      "massage":"HAPPY BIRTHDAY"
+    },
+    {
+      "id":"6879op",
+      "flavor":"LEMON",
+      "image":"",
+      "price": 120,
+      "render":1,
+      "color1": "#FF9D9D",
+      "color2": "none",
+      "decoration":1,
+      "massage":"HAPPY BIRTHDAY"
+    }
+   
+]
