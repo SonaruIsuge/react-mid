@@ -8,6 +8,10 @@
   src: url(./fonts/Kosugi-Regular.ttf);
 }
 
+:root {
+  --move: 0px;
+}
+
 p {
   margin: 0;
 }
@@ -348,8 +352,8 @@ span.ham-menu-bar3--touch {
 
 .main-image {
   position: absolute;
-  top: 0;
-  left: 12.25rem;
+  bottom: 0;
+  right: 0;
   width: 100%;
   object-position: center;
 }
@@ -362,6 +366,7 @@ span.ham-menu-bar3--touch {
   bottom: 11.5rem;
   left: 3.75rem;
   transition: all .25s linear;
+  z-index: 50;
 }
 
 .main-image-btn:hover {
@@ -398,12 +403,13 @@ span.ham-menu-bar3--touch {
 
   .main-image {
     left: 0;
+    top: 0;
   }
 
   .main-image-btn {
-    bottom: 1.5rem;
-    left: 1.875rem;
-    padding: 0.3125rem 1.25rem;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    padding: 0.4375rem 1.5625rem;
   }
 
   .main-image-btn p {
@@ -417,10 +423,12 @@ span.ham-menu-bar3--touch {
   text-align: center;
   margin-top: 7.125rem;
   color: #75645F;
+  font-weight: 400;
 }
 
 .best-seller-title {
   font-size: 2.875rem;
+  font-family: "Yu Gothib", serif;
   line-height: 3.875rem;
   color: #75645F;
   width: auto;
@@ -428,12 +436,79 @@ span.ham-menu-bar3--touch {
 
 .best-seller-list {
   display: flex;
+  position: relative;
   justify-content: space-around;
+  align-items: center;
   margin: auto;
+}
+
+.slick-arrow {
+  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  opacity: .5;
+  background-color: #FFCFB4;
+  text-align: center;
+  position: absolute;
+  cursor: pointer;
+}
+
+.slick-arrow:hover {
+  opacity: .8;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick--show {
+  display: flex;
+}
+
+.slick--hide {
+  display: none;
+}
+
+.slick-arrow div {
+  width: 30%;
+  height: 2px;
+  background-color: #000;
+}
+
+.slick-prev div:nth-of-type(1) {
+  transform: rotate(45deg);
+  margin: -10px 0 -11px 0;
+}
+
+.slick-prev div:nth-of-type(2) {
+  transform: rotate(-45deg);
+  margin: 0 0 -11px 0;
+}
+
+.slick-next div:nth-of-type(1) {
+  transform: rotate(-45deg);
+  margin: 0 0 -11px 0;
+}
+
+.slick-next div:nth-of-type(2) {
+  transform: rotate(45deg);
 }
 
 .best-product {
   margin: 4rem 5%;
+  transition: all .25s linear;
+}
+
+.moveable {
+  transform: translate3d(var(--move), 0px, 0px);
 }
 
 .best-product-img {
@@ -446,7 +521,7 @@ span.ham-menu-bar3--touch {
 .best-product-line {
   margin: 24px auto 14px;
   padding: 0;
-  width: 195px;
+  width: 20vw;
   border: 0;
   border-top: solid 6px;
   border-color: #FFCFB4;

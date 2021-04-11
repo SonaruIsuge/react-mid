@@ -1,5 +1,6 @@
 import { createContext, useReducer } from "react";
-import bestSaleGoods from "../json/bestSellers.json"
+import bestSaleGoods from "../json/bestSellers.json";
+import recommendGoods from "../json/recommend.json";
 import {
    SET_NAVBAR_ACTIVEITEM
 } from "../utils/constants";
@@ -9,6 +10,7 @@ export const StoreContext = createContext();
 const initialState = {
    page: {
       bestSaleGoods,
+      recommendGoods,
    },
    navBar: {
       activeItem: "/home",

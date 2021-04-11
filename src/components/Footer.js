@@ -1,4 +1,3 @@
-import { Space } from "antd";
 
 export default function Footer() {
     return (

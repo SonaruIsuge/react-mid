@@ -1,17 +1,14 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { SET_NAVBAR_ACTIVEITEM } from "../utils/constants";
 import { StoreContext } from "../store";
+import { setActiveNavItem } from "../actions";
 
 export default function NavItem(props){
     const { children, to, className, activeClassName } = props;
     const { state, dispatch } = useContext(StoreContext);
 
     const onClick = () => {
-        dispatch({
-            type: SET_NAVBAR_ACTIVEITEM,
-            payload: to
-        });
+        setActiveNavItem(dispatch, to);
     }
 
     return(
