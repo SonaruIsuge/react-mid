@@ -2,10 +2,15 @@ import { createContext, useReducer } from "react";
 import bestSaleGoods from "../json/bestSellers.json";
 import recommendGoods from "../json/recommend.json";
 import {
-   SET_NAVBAR_ACTIVEITEM
+   SET_NAVBAR_ACTIVEITEM,
+   ADD_CART_ITEM
 } from "../utils/constants";
 
 export const StoreContext = createContext();
+
+let cartItems = localStorage.getItem("cartItems")
+? JSON.parse(localStorage.getItem("cartItems"))
+: [];
 
 const initialState = {
    page: {
@@ -15,10 +20,8 @@ const initialState = {
    navBar: {
       activeItem: "/home",
    },
-   cartItems: [],
+   cartItems,
 };
-
-let cartItems = {};
 
 function reducer(state, action) {
    switch (action.type) {
@@ -29,6 +32,17 @@ function reducer(state, action) {
                activeItem: action.payload
             }
          };
+      
+      case ADD_CART_ITEM:
+         const item = action.payload;
+         const product = state.cartItems.find((x) => x.id === item.id);
+         if(product) {
+            cartItems = state.cartItems.map((x) => x.id === product.id ? item : x);
+            return {...state, cartItems}
+         }
+         cartItems = [...state.cartItems, item];
+         return {...state, cartItems};
+      
       }
    }
 

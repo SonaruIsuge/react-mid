@@ -18,11 +18,11 @@ export default function MainImage() {
                 EXCLUSIVE<br />
                 CAKES
             </p>
-            <div className="main-image-btn">
-                <Link to='/product' onClick={ onClick } className="product-link">
-                    <p>GO &gt;</p>
-                </Link>
-            </div>
+            <Link to='/product' onClick={ onClick } className="product-link">
+                <div className="main-image-btn">                    
+                    <p>GO &gt;</p>                    
+                </div>
+            </Link>
             <img alt="" className="main-image" src={homeBigImg}></img>
         </div>
     );
