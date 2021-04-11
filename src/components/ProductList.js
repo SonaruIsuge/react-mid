@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useEffect } from "react";
 import ProductItem from "./ProductItem";
 
-export default function ProductList({ listTitle, id, products }) {
+export default function ProductList({ listTitle, id, products, customize }) {
 //   const [listWidth, setListWidth] = useState(
 //     document.getElementById(`${id}`)?.clientWidth
 //   );
@@ -83,6 +83,7 @@ export default function ProductList({ listTitle, id, products }) {
                 product={product} 
                 key={product.id} 
                 moveStyle={moveStyle}
+                customize={customize}
             />
             ))}
             <div

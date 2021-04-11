@@ -4,14 +4,12 @@ import { Select, Button } from 'antd';
 
 const { Option } = Select;
 
-export default function ProductItem({widthDif, product, moveStyle}) {
+export default function ProductItem({widthDif, product, moveStyle, customize}) {
     const [flavor, setFlavor] = useState(product.flavor.length > 1 ? product.flavor[0] : product.flavor);
 
     return (
         <div className={`product ${widthDif > 0 ? "moveable" : ""}`} key={product.id} style={moveStyle}>
-            <Link to="###" className="product-link">
-                <img alt={product.category} className="product-img" src={(product.image)} />
-            </Link>
+            <img alt={product.category} className="product-img" src={(product.image)} />
             <hr className="product-line" />
             <p className="product-category">
                 {product.category.toUpperCase()}
@@ -25,7 +23,7 @@ export default function ProductItem({widthDif, product, moveStyle}) {
                     
                 >
                     {[...Array(product.flavor.length).keys()].map((x) => (
-                        <Option value={product.flavor[x]} key={product.flavor}>
+                        <Option value={product.flavor[x]} key={`${product.category}-${product.flavor[x]}`}>
                             {product.flavor[x]}
                         </Option>
                     ))}
@@ -38,7 +36,11 @@ export default function ProductItem({widthDif, product, moveStyle}) {
             <p className="product-price">
                 ${product.price}
             </p>
-            <Button></Button>
+            <Button 
+                className="product-btn"
+            >
+                <span className="product-btn-span">{customize ? "Choose" : "Add To Cart"}</span>
+            </Button>
         </div>
     );
 }

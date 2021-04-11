@@ -18,8 +18,8 @@ export default function Home() {
             </Header>
             <Content className="layout-content">
                 <MainImage />
-                <ProductList listTitle="BEST SELLERS" id="bs" products={ bestSaleGoods }/>
-                <ProductList listTitle="RECOMMEND" id="re" products={ recommendGoods } />
+                <ProductList listTitle="BEST SELLERS" id="bs" products={ bestSaleGoods } customize={true}/>
+                <ProductList listTitle="RECOMMEND" id="re" products={ recommendGoods } customize={false}/>
             </Content>
             <Footer className="layout-footer">
                 <AppFooter />
