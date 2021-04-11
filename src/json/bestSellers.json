@@ -2,21 +2,21 @@
     {
         "id":"qccyhc",
         "category":"cake",
-        "flavor":"BLUEBERRY",
+        "flavor":["BLUEBERRY"],
         "price":120,
         "image":"../images/home-cake"
     },
     {
         "id":"tni2rl",
         "category":"tart",
-        "flavor":"LEMON",
+        "flavor":["LEMON"],
         "price":100,
         "image":"../images/home-tart"
     },
     {
         "id":"wcegnf",
         "category":"browine",
-        "flavor":"BLUEBERRY",
+        "flavor":["BLUEBERRY"],
         "price":80,
         "image":"../images/home-brownie"
     }

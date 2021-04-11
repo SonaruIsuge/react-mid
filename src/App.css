@@ -419,14 +419,14 @@ span.ham-menu-bar3--touch {
 }
 
 /* Best Sellers */
-.best-seller {
+.product-list {
   text-align: center;
   margin-top: 7.125rem;
   color: #75645F;
   font-weight: 400;
 }
 
-.best-seller-title {
+.product-list-title {
   font-size: 2.875rem;
   font-family: "Yu Gothib", serif;
   line-height: 3.875rem;
@@ -434,7 +434,7 @@ span.ham-menu-bar3--touch {
   width: auto;
 }
 
-.best-seller-list {
+.list-block {
   display: flex;
   position: relative;
   justify-content: space-around;
@@ -442,6 +442,7 @@ span.ham-menu-bar3--touch {
   margin: auto;
 }
 
+/* Slick-arrow start */
 .slick-arrow {
   z-index: 2;
   flex-direction: column;
@@ -501,24 +502,26 @@ span.ham-menu-bar3--touch {
 .slick-next div:nth-of-type(2) {
   transform: rotate(45deg);
 }
+/* Slick-arrow end */
 
-.best-product {
+/* Product */
+.product {
   margin: 4rem 5%;
-  transition: all .25s linear;
+  transition: all .1s linear;
 }
 
 .moveable {
   transform: translate3d(var(--move), 0px, 0px);
 }
 
-.best-product-img {
+.product-img {
   min-width: 20vw;
   min-height: 20vw;
   background-color: #FAA58E;
   border-radius: 5%;
 }
 
-.best-product-line {
+.product-line {
   margin: 24px auto 14px;
   padding: 0;
   width: 20vw;
@@ -529,60 +532,60 @@ span.ham-menu-bar3--touch {
   border-radius: 0.8rem;
 }
 
-.best-product-category {
+.product-category {
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-.best-product-flavor {
+.product-flavor {
   font-size: 1.1875rem;
   line-height: 1.625rem;
 }
 
-.best-product-price {
+.product-price {
   font-size: 1.5rem;
   line-height: 2rem;
   padding-top: 1.375rem;
 }
 
 @media (max-width: 768px) {
-  .best-seller-title {
+  .product-list-title {
     font-size: 1.125rem;
     text-align: left;
     margin-left: 1.7rem;
     font-weight: 600;
   }
 
-  .best-seller-list {
+  .list-block {
     overflow: hidden;
     justify-content: flex-start;
   }
 
-  .best-product {
+  .product {
     margin: 11px 5%;
   }
 
-  .best-product-img {
+  .product-img {
     min-width: 155px;
     min-height: 155px;
   }
 
-  .best-product-line {
+  .product-line {
     width: 6.25rem;
     border-top: solid 3px #FFCFB4;
   }
 
-  .best-product-category {
+  .product-category {
     font-size: 1rem;
     line-height: 1rem;
   }
   
-  .best-product-flavor {
+  .product-flavor {
     font-size: 0.75rem;
     line-height: 2rem;
   }
   
-  .best-product-price {
+  .product-price {
     font-size: 1rem;
     line-height: 1rem;
     padding-top: 1rem;
