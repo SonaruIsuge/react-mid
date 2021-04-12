@@ -1,18 +1,26 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Select, Button } from 'antd';
+import { addCartItem } from "../actions";
+import { StoreContext } from "../store";
 
 const { Option } = Select;
 
 export default function ProductItem({widthDif, product, moveStyle, customize}) {
+    const { state, dispatch } = useContext(StoreContext);
+
     const [flavor, setFlavor] = useState(product.flavor.length > 1 ? product.flavor[0] : product.flavor);
+
+    const addToCart = () => {
+        addCartItem(dispatch, product, flavor, 1);
+    }
 
     return (
         <div className={`product ${widthDif > 0 ? "moveable" : ""}`} key={product.id} style={moveStyle}>
-            <img alt={product.category} className="product-img" src={(product.image)} />
+            <img alt={product.category? product.category:product.flavor} className="product-img" src={(product.image)} />
             <hr className="product-line" />
             <p className="product-category">
-                {product.category.toUpperCase()}
+                {product.category?.toUpperCase()}
             </p>
             {product.flavor.length > 1 ? (
                 <Select
@@ -38,6 +46,8 @@ export default function ProductItem({widthDif, product, moveStyle, customize}) {
             </p>
             <Button 
                 className="product-btn"
+                onClick={customize? "" : addToCart}
+                href={customize? "/product" : null}
             >
                 <span className="product-btn-span">{customize ? "Choose" : "Add To Cart"}</span>
             </Button>

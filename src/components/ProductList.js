@@ -1,19 +1,14 @@
 import React, { useCallback, useState, useEffect } from "react";
 import ProductItem from "./ProductItem";
 
-export default function ProductList({ listTitle, id, products, customize }) {
-//   const [listWidth, setListWidth] = useState(
-//     document.getElementById(`${id}`)?.clientWidth
-//   );
-//   const [fullWidth, setFullWidth] = useState(
-//     document.getElementById(`${id}`)?.scrollWidth
-//   );
+let isMove = false
+export default function ProductList({ listTitle, id, products, customize, deco }) {
     const [widthDif, calWidthDif] = useState(
         document.getElementById(`${id}`)?.scrollWidth -
         document.getElementById(`${id}`)?.clientWidth
     );
     //初始化widthDif
-    useEffect(()=>{
+    useEffect(()=>{        
         let node = document.getElementById(`${id}`);
         calWidthDif(node.scrollWidth - node.clientWidth);
     },[])
@@ -32,18 +27,28 @@ export default function ProductList({ listTitle, id, products, customize }) {
             })
             //在此計算widthDif
             let node = document.getElementById(`${id}`);
-            calWidthDif(node.scrollWidth - node.clientWidth);
+            if(node){
+                let old = 0
+                if(isMove){
+                    old = widthDif
+                    console.log(isMove + " " + widthDif + " " + old)
+                }
+                calWidthDif(node.scrollWidth + old - node.clientWidth);
+            }
+                
         },[])
 
         useEffect(()=>{
             window.addEventListener('resize',onResize);
             return (()=>{
                 window.removeEventListener('resize',onResize)
-            }), [document.documentElement.clientWidth]
+            })
         },[])
 
         return size;
     }
+
+    
 
     let size  = ChangeSize();
 
@@ -52,50 +57,51 @@ export default function ProductList({ listTitle, id, products, customize }) {
     });
 
     const onPrevClick = () => {
-        //const root = document.documentElement;
-        //root.style.setProperty('--move', '0px');
+        isMove = false
         setMoveStyle({ transform: "translate3d(0px, 0px, 0px)" });
     };
 
     const onNextClick = () => {
-        console.log(widthDif);
-        //const root = document.documentElement;
-        //root.style.setProperty('--move', `-${widthDif}px`)
+        isMove = true
+        console.log("MOVE TO TRUE")
         setMoveStyle({ transform: `translate3d(-${widthDif}px, 0px, 0px)` });
     };
 
     return (
         <div className="product-list">
-        <p className="product-list-title">{listTitle}</p>
-        <div className="list-block" id={id}>
-            <div
-            className={`slick-prev slick-arrow ${
-                widthDif > 0 ? "slick--show" : "slick--hide"
-            }`}
-            onClick={onPrevClick}
-            >
-            <div></div>
-            <div></div>
+            <div className="product-title-block">
+                <img src={deco} alt="deco" className={`list-deco ${deco?"":"list-deco--hide"}`}></img>
+                <p className="product-list-title">{listTitle}</p>
             </div>
-            {products.map((product) => (
-            <ProductItem
-                widthDif={widthDif} 
-                product={product} 
-                key={product.id} 
-                moveStyle={moveStyle}
-                customize={customize}
-            />
-            ))}
-            <div
-            className={`slick-next slick-arrow ${
-                widthDif > 0 ? "slick--show" : "slick--hide"
-            }`}
-            onClick={onNextClick}
-            >
-            <div></div>
-            <div></div>
+            <div className={`list-block ${listTitle.replace(" ","_")}`} id={id}>
+                <div
+                className={`slick-prev slick-arrow ${
+                    widthDif > 0 ? "slick--show" : "slick--hide"
+                }`}
+                onClick={onPrevClick}
+                >
+                <div></div>
+                <div></div>
+                </div>
+                {products.map((product) => (
+                <ProductItem
+                    widthDif={widthDif} 
+                    product={product} 
+                    key={product.id} 
+                    moveStyle={moveStyle}
+                    customize={customize}
+                />
+                ))}
+                <div
+                className={`slick-next slick-arrow ${
+                    widthDif > 0 ? "slick--show" : "slick--hide"
+                }`}
+                onClick={onNextClick}
+                >
+                <div></div>
+                <div></div>
+                </div>
             </div>
-        </div>
         </div>
     );
 }

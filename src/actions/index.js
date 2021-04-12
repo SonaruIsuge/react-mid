@@ -10,11 +10,11 @@ export const setActiveNavItem = (dispatch, activeNavItem) => {
     });
 }
 
-export const addCartItem = (dispatch, product, qty) => {
+export const addCartItem = (dispatch, product, flavor, qty) => {
     const item = {
       id: product.id,
       category: product.category,
-      flavor: product.flavor,
+      flavor: flavor,
       price: product.price,
       image: product.image,
       qty,
@@ -23,4 +23,5 @@ export const addCartItem = (dispatch, product, qty) => {
       type: ADD_CART_ITEM,
       payload: item,
     });
+    console.log(item);
   };
