@@ -1,23 +1,28 @@
 [
     {
-        "id":"qccyhc",
-        "category":"cake",
+        "id":"2b1kg8",
+        "type":"CAKE",
         "flavor":["BLUEBERRY"],
-        "price":120,
-        "image":"../images/home-cake"
+        "image":"../images/flavor-blueberry",
+        "price": 110,
+        "render":1,
+        "color1": "#FF9D9D",
+        "color2": "none",
+        "decoration":1,
+        "massage":"HAPPY BIRTHDAY"
     },
     {
-        "id":"tni2rl",
-        "category":"tart",
+        "id":"6879op",
+        "type":"TART",
         "flavor":["LEMON"],
-        "price":100,
-        "image":"../images/home-tart"
+        "image":"../images/flavor-lemon",
+        "price": 120
     },
     {
-        "id":"wcegnf",
-        "category":"browine",
+        "id":"123kg8",
+        "type":"BROWNIE",
         "flavor":["BLUEBERRY"],
-        "price":80,
-        "image":"../images/home-brownie"
+        "image":"../images/flavor-blueberry",
+        "price": 100
     }
 ]
