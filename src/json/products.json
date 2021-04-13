@@ -1,0 +1,91 @@
+[
+    {
+      "id":"2b1kg8",
+      "type":"CAKE",
+      "flavor":["BLUEBERRY"],
+      "image":"../images/flavor-blueberry",
+      "price": 110,
+      "render":1,
+      "color1": "#FF9D9D",
+      "color2": "none",
+      "decoration":1,
+      "massage":"HAPPY BIRTHDAY"
+    },
+    {
+      "id":"6553n8",
+      "type":"CAKE",
+      "flavor":["LEMON"],
+      "image":"../images/flavor-lemon",
+      "price": 100,
+      "render":1,
+      "color1": "#FF9D9D",
+      "color2": "none",
+      "decoration":1,
+      "massage":"HAPPY BIRTHDAY"
+    },
+    {
+      "id":"8z15tl",
+      "type":"CAKE",
+      "flavor":["STRAWBERRY"],
+      "image":"../images/flavor-strawberry",
+      "price": 110,
+      "render":1,
+      "color1": "#FF9D9D",
+      "color2": "none",
+      "decoration":1,
+      "massage":"HAPPY BIRTHDAY"
+
+    },
+    {
+      "id":"bh5rcu",
+      "type":"CAKE",
+      "flavor":["APPLE"],
+      "image":"../images/flavor-apple",
+      "price": 100,
+      "render":1,
+      "color1": "#FF9D9D",
+      "color2": "none",
+      "decoration":1,
+      "massage":"HAPPY BIRTHDAY"
+
+    },
+    {
+        "id":"789yu6",
+        "type":"TART",
+        "flavor":["BLUEBERRY"],
+        "image":"../images/flavor-blueberry",
+        "price": 130
+  
+      },
+      {
+        "id":"6879op",
+        "type":"TART",
+        "flavor":["LEMON"],
+        "image":"../images/flavor-lemon",
+        "price": 120
+    
+      },
+      {
+        "id":"123kg8",
+        "type":"BROWNIE",
+        "flavor":["BLUEBERRY"],
+        "image":"../images/flavor-blueberry",
+        "price": 100
+      },
+      {
+        "id":"8995r9",
+        "type":"BROWNIE",
+        "flavor":["STRAWBERRY"],
+        "image":"../images/flavor-strawberry",
+        "price": 90
+      },
+      {
+        "id":"5ssstr",
+        "type":"BROWNIE",
+        "flavor":["APPLE"],
+        "image":"../images/flavor-apple",
+        "price": 80
+      }
+
+  ]
+  
