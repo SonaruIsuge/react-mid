@@ -7,12 +7,12 @@ import { StoreContext } from "../store";
 const { Option } = Select;
 
 export default function ProductItem({widthDif, product, moveStyle, customize}) {
-    const { state, dispatch } = useContext(StoreContext);
+    const { dispatch } = useContext(StoreContext);
 
     const [flavor, setFlavor] = useState(product.flavor.length > 1 ? product.flavor[0] : product.flavor);
 
     const addToCart = () => {
-        addCartItem(dispatch, product, flavor, 1);
+        addCartItem(dispatch, product, flavor, null, null, product.price, 1);
     }
 
     return (

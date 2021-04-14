@@ -3,24 +3,24 @@
         "id":"srdnrz",
         "no":1,
         "image":"",
-        "price":20
+        "price":0
     },
     {
         "id":"thskse",
         "no":2,
         "image":"",
-        "price":10
+        "price":0
     },
     {
         "id":"zsoe81",
         "no":3,
-        "image":"",
-        "price":0
+        "text":"FRUIT",
+        "price":20
     },
     {
         "id":"0o782t",
         "no":4,
-        "image":"",
-        "price":0
+        "text":"IMAGE",
+        "price":30
     }
 ]

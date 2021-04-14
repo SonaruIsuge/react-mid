@@ -1,7 +1,7 @@
 [
     {
       "id":"2b1kg8",
-      "type":"CAKE",
+      "category":"cake",
       "flavor":["BLUEBERRY"],
       "image":"../images/flavor-blueberry",
       "price": 110,
@@ -13,7 +13,7 @@
     },
     {
       "id":"6553n8",
-      "type":"CAKE",
+      "category":"cake",
       "flavor":["LEMON"],
       "image":"../images/flavor-lemon",
       "price": 100,
@@ -25,7 +25,7 @@
     },
     {
       "id":"8z15tl",
-      "type":"CAKE",
+      "category":"cake",
       "flavor":["STRAWBERRY"],
       "image":"../images/flavor-strawberry",
       "price": 110,
@@ -38,7 +38,7 @@
     },
     {
       "id":"bh5rcu",
-      "type":"CAKE",
+      "category":"cake",
       "flavor":["APPLE"],
       "image":"../images/flavor-apple",
       "price": 100,
@@ -51,7 +51,7 @@
     },
     {
         "id":"789yu6",
-        "type":"TART",
+        "category":"tart",
         "flavor":["BLUEBERRY"],
         "image":"../images/flavor-blueberry",
         "price": 130
@@ -59,7 +59,7 @@
       },
       {
         "id":"6879op",
-        "type":"TART",
+        "category":"tart",
         "flavor":["LEMON"],
         "image":"../images/flavor-lemon",
         "price": 120
@@ -67,21 +67,21 @@
       },
       {
         "id":"123kg8",
-        "type":"BROWNIE",
+        "category":"browine",
         "flavor":["BLUEBERRY"],
         "image":"../images/flavor-blueberry",
         "price": 100
       },
       {
         "id":"8995r9",
-        "type":"BROWNIE",
+        "category":"browine",
         "flavor":["STRAWBERRY"],
         "image":"../images/flavor-strawberry",
         "price": 90
       },
       {
         "id":"5ssstr",
-        "type":"BROWNIE",
+        "category":"browine",
         "flavor":["APPLE"],
         "image":"../images/flavor-apple",
         "price": 80

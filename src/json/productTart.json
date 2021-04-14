@@ -1,6 +1,7 @@
 [
     {
       "id":"789yu6",
+      "category":"tart",
       "flavor":["BLUEBERRY"],
       "image":"../images/flavor-blueberry",
       "price": 130
@@ -8,6 +9,7 @@
     },
     {
       "id":"6879op",
+      "category":"tart",
       "flavor":["LEMON"],
       "image":"../images/flavor-lemon",
       "price": 120

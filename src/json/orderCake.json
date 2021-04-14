@@ -1,6 +1,7 @@
 [
     {
       "id":"2b1kg8",
+      "category":"cake",
       "flavor":["BLUEBERRY"],
       "image":"../images/flavor-blueberry",
       "price": 110,
@@ -12,6 +13,7 @@
     },
     {
       "id":"6553n8",
+      "category":"cake",
       "flavor":["LEMON"],
       "image":"../images/flavor-lemon",
       "price": 100,
@@ -23,6 +25,7 @@
     },
     {
       "id":"8z15tl",
+      "category":"cake",
       "flavor":["STRAWBERRY"],
       "image":"../images/flavor-strawberry",
       "price": 110,
@@ -35,6 +38,7 @@
     },
     {
       "id":"bh5rcu",
+      "category":"cake",
       "flavor":["APPLE"],
       "image":"../images/flavor-apple",
       "price": 100,
