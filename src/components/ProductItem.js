@@ -47,7 +47,7 @@ export default function ProductItem({widthDif, product, moveStyle, customize}) {
             <Button 
                 className="product-btn"
                 onClick={customize? "" : addToCart}
-                href={customize? "/product" : null}
+                href={customize? `/productCustomize/${product.id}` : null}
             >
                 <span className="product-btn-span">{customize ? "Choose" : "Add To Cart"}</span>
             </Button>

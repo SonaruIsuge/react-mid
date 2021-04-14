@@ -4,6 +4,8 @@ import recommendGoods from "../json/recommend.json";
 import productCake from "../json/orderCake.json";
 import productTart from "../json/productTart.json";
 import productBrownie from "../json/productBrownie.json";
+import customizeColor from "../json/color.json";
+import customizeDecoration from "../json/decoration.json";
 import {
    SET_NAVBAR_ACTIVEITEM,
    ADD_CART_ITEM
@@ -25,6 +27,10 @@ const initialState = {
    },
    navBar: {
       activeItem: "/home",
+   },
+   customize: {
+      customizeColor,
+      customizeDecoration,
    },
    cartItems,
 };
