@@ -87,7 +87,7 @@ export default function CustomizeDetail({product}) {
                 className="customize-preview"
             >
                 <p className="customize-preview-title">PREVIEW</p> 
-                <img alt="product" src={cake} className="preview-cake-img" />
+                <img alt="product" src={product.image} className="preview-cake-img" />
             </Col>
             <Col
                 sm={{span: 24}}

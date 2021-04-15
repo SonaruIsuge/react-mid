@@ -512,6 +512,17 @@ span.ham-menu-bar3--touch {
   background-color: #000;
 }
 
+@media(max-width: 768px) {
+  .slick-arrow {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .slick-arrow div {
+    width: 40%;
+  }
+}
+
 .slick-prev div:nth-of-type(1) {
   transform: rotate(45deg);
   margin: -10px 0 -11px 0;
@@ -552,16 +563,24 @@ span.ham-menu-bar3--touch {
 }
 
 .product-img {
+  width: 100%;
   min-width: 20vw;
   min-height: 20vw;
   background-color: #FAA58E;
   border-radius: 5%;
 }
 
+@media(min-width: 1550px) {
+  .product-img {
+    min-width: 310px;
+    min-height: 310px;
+  }
+}
+
 .product-line {
   margin: 24px auto 14px;
   padding: 0;
-  width: 20vw;
+  width: 100%;
   border: 0;
   border-top: solid 6px;
   border-color: #FFCFB4;

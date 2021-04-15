@@ -4,20 +4,20 @@
         "category":"cake",
         "flavor":["BLUEBERRY","APPLE","LEMON","STRAWBERRY"],
         "price":100,
-        "image":"../images/home-cake"
+        "image":"/images/home-cake.png"
     },
     {
         "id":"kg9efb",
         "category":"tart",
         "flavor":["BLUEBERRY","LEMON"],
         "price":90,
-        "image":"../images/home-tart"
+        "image":"/images/home-tart.png"
     },
     {
         "id":"nnjsu5",
         "category":"browine",
         "flavor":["BLUEBERRY","APPLE","STRAWBERRY"],
         "price":60,
-        "image":"../images/home-brownie"
+        "image":"/images/home-brownie.png"
     }
 ]

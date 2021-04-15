@@ -3,7 +3,7 @@
         "id":"2b1kg8",
         "category":"cake",
         "flavor":["BLUEBERRY"],
-        "image":"../images/flavor-blueberry",
+        "image":"/images/flavor-blueberry.png",
         "price": 110,
         "render":1,
         "color1": "#FF9D9D",
@@ -15,14 +15,14 @@
         "id":"6879op",
         "category":"tart",
         "flavor":["LEMON"],
-        "image":"../images/flavor-lemon",
+        "image":"/images/flavor-lemon.png",
         "price": 120
     },
     {
         "id":"123kg8",
         "category":"browine",
         "flavor":["BLUEBERRY"],
-        "image":"../images/flavor-blueberry",
+        "image":"/images/flavor-blueberry.png",
         "price": 100
     }
 ]

@@ -3,21 +3,21 @@
       "id":"123kg8",
       "category":"browine",
       "flavor":["BLUEBERRY"],
-      "image":"../images/flavor-blueberry",
+      "image":"/images/flavor-blueberry.png",
       "price": 100
     },
     {
       "id":"8995r9",
       "category":"browine",
       "flavor":["STRAWBERRY"],
-      "image":"../images/flavor-strawberry",
+      "image":"/images/flavor-strawberry.png",
       "price": 90
     },
     {
       "id":"5ssstr",
       "category":"browine",
       "flavor":["APPLE"],
-      "image":"../images/flavor-apple",
+      "image":"/images/flavor-apple.png",
       "price": 80
       
 
