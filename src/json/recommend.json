@@ -5,10 +5,10 @@
         "flavor":["BLUEBERRY","APPLE","LEMON","STRAWBERRY"],
         "price":100,
         "image":"/images/home-cake.png",
-        "color":{
+        "color":[{
             "id":"74sajz",
             "color": "#FF9D9D"
-        },
+        }],
         "decoration":{
             "id":"srdnrz",
             "category":"cake",
@@ -16,7 +16,8 @@
             "image":"/images/Deco-image-02.png",
             "imagePreview":"/images/Deco-004.png",
             "price":0 
-        }
+        },
+        "message":""
     },
     {
         "id":"kg9efb",
@@ -31,7 +32,8 @@
             "text":"CREAM",
             "imagePreview":"/images/Tart-deco-ol.png",
             "price":0
-        }
+        },
+        "message":""
     },
     {
         "id":"nnjsu5",
@@ -49,6 +51,7 @@
                 "id":"74sajz",
                 "color": "#FF9D9D"},
             "price":0
-        }
+        },
+        "message":""
     }
 ]

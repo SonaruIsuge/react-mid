@@ -11,7 +11,7 @@ export default function ProductItem({widthDif, product, moveStyle, customize}) {
     const [flavor, setFlavor] = useState(product.flavor.length > 1 ? product.flavor[0] : product.flavor);
 
     const addToCart = () => {
-        addCartItem(dispatch, product, flavor, null, null, product.price, 1);
+        addCartItem(dispatch, product, flavor, product.color?product.color:null, product.decoration, product.message, product.price, 1);
     }
 
     useEffect(()=>{
@@ -41,7 +41,7 @@ export default function ProductItem({widthDif, product, moveStyle, customize}) {
                 </Select>
             ) : (
                 <p className="product-flavor">
-                    {product.flavor}
+                    {product.flavor[0]}
                 </p>
             )}            
             <p className="product-price">

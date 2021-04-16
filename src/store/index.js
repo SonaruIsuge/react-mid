@@ -9,7 +9,8 @@ import customizeColor from "../json/color.json";
 import customizeDecoration from "../json/decoration.json";
 import {
    SET_NAVBAR_ACTIVEITEM,
-   ADD_CART_ITEM
+   ADD_CART_ITEM,
+   REMOVE_CART_ITEM
 } from "../utils/constants";
 
 export const StoreContext = createContext();
@@ -54,6 +55,10 @@ function reducer(state, action) {
             return {...state, cartItems}
          }
          cartItems = [...state.cartItems, item];
+         return {...state, cartItems};
+
+      case REMOVE_CART_ITEM:
+         cartItems = state.cartItems.filter((x) => x.id !== action.payload);
          return {...state, cartItems};
 
       default:

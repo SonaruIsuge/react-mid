@@ -11,7 +11,8 @@ export default function CustomizeDetail({product}) {
 
     const [isMultipleColor, setIsMultipleColor] = useState(false);
     const [chooseColor, setChooseColor] = useState([customizeColor[0]]);
-    const [chooseDeco, setChooseDeco] = useState(customizeDecoration[0]);
+    const [chooseDeco, setChooseDeco] = useState((customizeDecoration.filter(x=>x.category==product.category))[0]);
+    const [message, setMessage] = useState("");
     const [qty, setQty] = useState(1);
     const [totalPrice, calTotalPrice] = useState(product.price);
 
@@ -60,7 +61,7 @@ export default function CustomizeDetail({product}) {
     }, [product.price, isMultipleColor, chooseDeco.price])
 
     const addToCart = () => {
-        addCartItem(dispatch, product, product.flavor, chooseColor, chooseDeco, totalPrice, qty);
+        addCartItem(dispatch, product, product.flavor[0], chooseColor, chooseDeco, message, totalPrice, qty);
     }
 
     // Color Debug
@@ -72,6 +73,10 @@ export default function CustomizeDetail({product}) {
     useEffect(()=>{
         console.log(chooseDeco);
     }, [chooseDeco])
+
+    useEffect(()=>{
+        console.log(message)
+    }, [message])
 
     // Total Price Debug
     useEffect(()=>{
@@ -143,7 +148,7 @@ export default function CustomizeDetail({product}) {
                     <li className="option customize-deco">
                         <p className="option-title">DECORATION</p>
                         <Row className="option-choose">
-                            {customizeDecoration.map((deco) => (
+                            {(customizeDecoration.filter(x => x.category == product.category)).map((deco) => (
                                 <Col 
                                     key={deco.id}
                                     className="each-deco"
@@ -181,6 +186,7 @@ export default function CustomizeDetail({product}) {
                                     placeholder="HAPPY BIRTHDAY"
                                     allowClear={true}
                                     size="large"
+                                    onChange={(t)=>setMessage(t.target.value)}
                                 ></TextArea>
                             </div>
                             <div className="total-price-block">
