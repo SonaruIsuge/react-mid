@@ -13,7 +13,7 @@ export default function Home() {
     const { state: { page: { bestSaleGoods, recommendGoods } }, dispatch } = useContext(StoreContext);
 
     useEffect(() => {
-        setActiveNavItem(dispatch, "/home");
+        setActiveNavItem(dispatch, "/");
     },[])
 
     return(

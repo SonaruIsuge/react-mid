@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import useReducerWithThunk from 'use-reducer-thunk';
 import bestSaleGoods from "../json/bestSellers.json";
 import recommendGoods from "../json/recommend.json";
 import productCake from "../json/orderCake.json";
@@ -54,12 +55,14 @@ function reducer(state, action) {
          }
          cartItems = [...state.cartItems, item];
          return {...state, cartItems};
-      
-      }
+
+      default:
+         return state;
    }
+}
 
 export function StoreProvider(props) {
-   const [state, dispatch] = useReducer(reducer, initialState);
+   const [state, dispatch] = useReducerWithThunk(reducer, initialState, "example");
    const value = { state, dispatch };
  
    return (

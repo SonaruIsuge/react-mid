@@ -1,14 +1,13 @@
 import { Col, Row, Button, Input, Select } from "antd";
 import { useState, useEffect, useContext } from "react";
 import { StoreContext } from "../store";
-import cake from "../images/home-cake.png";
 import { addCartItem } from "../actions";
 
 const {TextArea} = Input;
 const { Option } = Select;
 
 export default function CustomizeDetail({product}) {
-    const { state: {customize: { customizeColor, customizeDecoration } }, dispatch } = useContext(StoreContext);
+    const { state: {customize: { customizeColor, customizeDecoration }, cartItems }, dispatch } = useContext(StoreContext);
 
     const [isMultipleColor, setIsMultipleColor] = useState(false);
     const [chooseColor, setChooseColor] = useState([customizeColor[0]]);
@@ -58,7 +57,7 @@ export default function CustomizeDetail({product}) {
         (isMultipleColor? 20 : 0) + 
         (chooseDeco.price)
         calTotalPrice(price)
-    })
+    }, [product.price, isMultipleColor, chooseDeco.price])
 
     const addToCart = () => {
         addCartItem(dispatch, product, product.flavor, chooseColor, chooseDeco, totalPrice, qty);
@@ -78,6 +77,10 @@ export default function CustomizeDetail({product}) {
     useEffect(()=>{
         console.log(totalPrice);
     }, [totalPrice])
+
+    useEffect(()=>{
+        console.log(cartItems);
+    }, [cartItems])
 
     return (
         <Row className="customize">
@@ -205,7 +208,7 @@ export default function CustomizeDetail({product}) {
                                 <Button 
                                     className="add-to-cart-btn"
                                     type="primary"
-                                    onClick={()=>{addToCart()}}
+                                    onClick={addToCart}
                                 >
                                     ADD TO CART
                                 </Button>

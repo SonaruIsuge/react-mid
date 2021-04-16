@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Select, Button } from 'antd';
 import { addCartItem } from "../actions";
 import { StoreContext } from "../store";
@@ -7,13 +6,17 @@ import { StoreContext } from "../store";
 const { Option } = Select;
 
 export default function ProductItem({widthDif, product, moveStyle, customize}) {
-    const { dispatch } = useContext(StoreContext);
+    const { state: {cartItems}, dispatch } = useContext(StoreContext);
 
     const [flavor, setFlavor] = useState(product.flavor.length > 1 ? product.flavor[0] : product.flavor);
 
     const addToCart = () => {
         addCartItem(dispatch, product, flavor, null, null, product.price, 1);
     }
+
+    useEffect(()=>{
+        console.log(cartItems);
+    }, [cartItems])
 
     return (
         <div className={`product ${widthDif > 0 ? "moveable" : ""}`} key={product.id} style={moveStyle}>
