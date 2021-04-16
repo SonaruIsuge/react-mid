@@ -4,20 +4,51 @@
         "category":"cake",
         "flavor":["BLUEBERRY","APPLE","LEMON","STRAWBERRY"],
         "price":100,
-        "image":"/images/home-cake.png"
+        "image":"/images/home-cake.png",
+        "color":{
+            "id":"74sajz",
+            "color": "#FF9D9D"
+        },
+        "decoration":{
+            "id":"srdnrz",
+            "category":"cake",
+            "no":1,
+            "image":"/images/Deco-image-02.png",
+            "imagePreview":"/images/Deco-004.png",
+            "price":0 
+        }
     },
     {
         "id":"kg9efb",
         "category":"tart",
         "flavor":["BLUEBERRY","LEMON"],
         "price":90,
-        "image":"/images/home-tart.png"
+        "image":"/images/home-tart.png",
+        "decoration":{
+            "id":"0o999t",
+            "category":"tart",
+            "no":1,
+            "text":"CREAM",
+            "imagePreview":"/images/Tart-deco-ol.png",
+            "price":0
+        }
     },
     {
         "id":"nnjsu5",
         "category":"browine",
         "flavor":["BLUEBERRY","APPLE","STRAWBERRY"],
         "price":60,
-        "image":"/images/home-brownie.png"
+        "image":"/images/home-brownie.png",
+        "decoration":{
+            "id":"wiqoet",
+            "category":"browine",
+            "no":1,
+            "text":"COLOR",
+            "imagePreview":"/images/Browine-deco-color.png",
+            "color":{
+                "id":"74sajz",
+                "color": "#FF9D9D"},
+            "price":0
+        }
     }
 ]

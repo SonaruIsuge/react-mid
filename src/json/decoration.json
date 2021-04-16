@@ -1,25 +1,68 @@
 [
     {
         "id":"srdnrz",
+        "category":"cake",
         "no":1,
-        "image":"",
+        "image":"/images/Deco-image-02.png",
+        "imagePreview":"/images/Deco-004.png",
         "price":0
     },
     {
         "id":"thskse",
+        "category":"cake",
         "no":2,
-        "image":"",
+        "image":"/images/Deco-image-03.png",
+        "imagePreview":"/images/Deco-003.png",
         "price":0
     },
     {
         "id":"zsoe81",
+        "category":"cake",
         "no":3,
         "text":"FRUIT",
+        "imagePreview":"/images/Deco-002.png",
         "price":20
     },
     {
         "id":"0o782t",
+        "category":"cake",
         "no":4,
+        "text":"IMAGE",
+        "imagePreview":"/images/deco-001.png",
+        "price":30
+    },
+    {
+        "id":"0o999t",
+        "category":"tart",
+        "imagePreview":"/images/Tart-deco-ol.png",
+        "no":1,
+        "text":"CREAM",
+        "price":0
+    },
+    {
+        "id":"euw99t",
+        "category":"tart",
+        "imagePreview":"/images/tart-deco-03.png",
+        "no":2,
+        "text":"FRUIT",
+        "price":0
+    },
+    {
+        "id":"wiqoet",
+        "category":"browine",
+        "no":1,
+        "text":"COLOR",
+        "imagePreview":"/images/Browine-deco-color.png",
+        "color":{
+            "id":"74sajz",
+            "color": "#FF9D9D"},
+        "price":0
+    },
+    {
+        "id":"wilkot",
+        "category":"browine",
+        "imagePreview":"/images/Browine-deco-ol.png",
+        "no":2,
         "text":"IMAGE",
         "price":30
     }
