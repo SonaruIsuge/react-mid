@@ -4,6 +4,7 @@
       "category":"tart",
       "flavor":["BLUEBERRY"],
       "image":"/images/flavor-blueberry.png",
+      "imagePreview":"/images/Tart-base.png",
       "price": 130
 
     },
@@ -12,6 +13,7 @@
       "category":"tart",
       "flavor":["LEMON"],
       "image":"/images/flavor-lemon.png",
+      "imagePreview":"/images/Tart-base.png",
       "price": 120
   
     }

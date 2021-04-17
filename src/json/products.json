@@ -4,6 +4,7 @@
       "category":"cake",
       "flavor":["BLUEBERRY"],
       "image":"/images/flavor-blueberry.png",
+      "imagePreview":"/images/cake-empty.png",
       "price": 110,
       "render":1,
       "color1": "#FF9D9D",
@@ -16,6 +17,7 @@
       "category":"cake",
       "flavor":["LEMON"],
       "image":"/images/flavor-lemon.png",
+      "imagePreview":"/images/cake-empty.png",
       "price": 100,
       "render":1,
       "color1": "#FF9D9D",
@@ -28,6 +30,7 @@
       "category":"cake",
       "flavor":["STRAWBERRY"],
       "image":"/images/flavor-strawberry.png",
+      "imagePreview":"/images/cake-empty.png",
       "price": 110,
       "render":1,
       "color1": "#FF9D9D",
@@ -41,6 +44,7 @@
       "category":"cake",
       "flavor":["APPLE"],
       "image":"/images/flavor-apple.png",
+      "imagePreview":"/images/cake-empty.png",
       "price": 100,
       "render":1,
       "color1": "#FF9D9D",
@@ -54,6 +58,7 @@
         "category":"tart",
         "flavor":["BLUEBERRY"],
         "image":"/images/flavor-blueberry.png",
+        "imagePreview":"/images/Tart-base.png",
         "price": 130
   
       },
@@ -62,6 +67,7 @@
         "category":"tart",
         "flavor":["LEMON"],
         "image":"/images/flavor-lemon.png",
+        "imagePreview":"/images/Tart-base.png",
         "price": 120
     
       },
@@ -70,6 +76,7 @@
         "category":"browine",
         "flavor":["BLUEBERRY"],
         "image":"/images/flavor-blueberry.png",
+        "imagePreview":"/images/Brownie.png",
         "price": 100
       },
       {
@@ -77,6 +84,7 @@
         "category":"browine",
         "flavor":["STRAWBERRY"],
         "image":"/images/flavor-strawberry.png",
+        "imagePreview":"/images/Brownie.png",
         "price": 90
       },
       {
@@ -84,6 +92,7 @@
         "category":"browine",
         "flavor":["APPLE"],
         "image":"/images/flavor-apple.png",
+        "imagePreview":"/images/Brownie.png",
         "price": 80
       }
 

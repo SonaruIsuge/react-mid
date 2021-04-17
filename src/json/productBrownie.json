@@ -4,6 +4,7 @@
       "category":"browine",
       "flavor":["BLUEBERRY"],
       "image":"/images/flavor-blueberry.png",
+      "imagePreview":"/images/Brownie.png",
       "price": 100
     },
     {
@@ -11,6 +12,7 @@
       "category":"browine",
       "flavor":["STRAWBERRY"],
       "image":"/images/flavor-strawberry.png",
+      "imagePreview":"/images/Brownie.png",
       "price": 90
     },
     {
@@ -18,6 +20,7 @@
       "category":"browine",
       "flavor":["APPLE"],
       "image":"/images/flavor-apple.png",
+      "imagePreview":"/images/Brownie.png",
       "price": 80
       
 
