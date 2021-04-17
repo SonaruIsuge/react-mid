@@ -1155,6 +1155,8 @@ span.ham-menu-bar3--touch {
 .cart-item-img {
   width: 100%;
   justify-self: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cart-item-deco-preview-img {
