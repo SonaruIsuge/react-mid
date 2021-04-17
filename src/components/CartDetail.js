@@ -48,7 +48,7 @@ export default function CartDetail() {
                                 className="cart-item-img-block"
                             >
                                 <img alt="product-preview" src={item.imagePreview} className="cart-item-img"
-                                    style={item.category=="cake"?{
+                                    style={item.category==="cake"?{
                                         backgroundImage: `url(${cakeBg}), 
                                         linear-gradient(${item.color[0]?item.color[0].color:"#FFFFFF"}, ${item.color[1]?item.color[1].color:(item.color[0]?item.color[0].color:"#FFFFFF")}` 
                                     }:{}}
@@ -71,7 +71,7 @@ export default function CartDetail() {
                                             defaultValue={item.qty}
                                             bordered={false}
                                             onChange={
-                                                (qty) => addCartItem(dispatch, item, item.flavor, item.color, item.decoration, item.message, item.price, qty)
+                                                (qty) => addCartItem(dispatch, item, item.flavor, item.color, item.decoration, item.decoInfo, item.message, item.price, qty)
                                             }
                                         >
                                             {[...Array(5).keys()].map((x) => (
@@ -98,7 +98,7 @@ export default function CartDetail() {
                                         <p className="cart-item-title">Decoration</p>
                                         <div className="cart-item-deco">
                                             {item.decoration.image?(
-                                                <img alt="decoration-image" src={item.decoration.image} className="cart-item-deco-img" />
+                                                <img alt="decoration" src={item.decoration.image} className="cart-item-deco-img" />
                                             ):(
                                                 <p className="cart-item-deco-text">{item.decoration.text}</p>
                                             )}

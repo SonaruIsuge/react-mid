@@ -11,7 +11,7 @@ export const setActiveNavItem = (dispatch, activeNavItem) => {
     });
 }
 
-export const addCartItem = (dispatch, product, flavor, color, decoration, message, price, qty) => {
+export const addCartItem = (dispatch, product, flavor, color, decoration, decoInfo, message, price, qty) => {
   const item = {
     id: product.id,
     category: product.category,
@@ -19,7 +19,15 @@ export const addCartItem = (dispatch, product, flavor, color, decoration, messag
     imagePreview: product.imagePreview,
     flavor,
     color,
-    decoration,
+    decoration: {
+      id: decoration.id,
+      category: decoration.category,
+      text: decoration.text,
+      image: decoration.image,
+      imagePreview: decoration.imagePreview,
+      info: decoInfo,
+      price: decoration.price,
+    },
     message,
     price,
     qty,

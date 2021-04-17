@@ -36,13 +36,13 @@ export default function NavBar() {
                 bodyStyle={{ backgroundColor: "#FAA581" }}
                 headerStyle={{ backgroundColor: "#FAA581", color: "#fff" }}
             >
-                <NavItem onClose={handleCloseDrawer} to='/home' className='nav-item' activeClassName='nav-item--active'>
+                <NavItem onClose={handleCloseDrawer} to='/' className='nav-item' activeClassName='nav-item--active'>
                     HOME
                 </NavItem>
                 <NavItem onClose={handleCloseDrawer} to='/product' className='nav-item' activeClassName='nav-item--active'>
                     PRODUCT
                 </NavItem>
-                <NavItem onClose={handleCloseDrawer} to='/' className='nav-item' activeClassName='nav-item--active'>
+                <NavItem onClose={handleCloseDrawer} to='/aboutUs' className='nav-item' activeClassName='nav-item--active'>
                     ABOUT US
                 </NavItem>
             </Drawer>

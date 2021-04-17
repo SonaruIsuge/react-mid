@@ -11,7 +11,17 @@ export default function ProductItem({widthDif, product, moveStyle, customize}) {
     const [flavor, setFlavor] = useState(product.flavor.length > 1 ? product.flavor[0] : product.flavor);
 
     const addToCart = () => {
-        addCartItem(dispatch, product, flavor, product.color?product.color:null, product.decoration, product.message, product.price, 1);
+        addCartItem(
+            dispatch, 
+            product, 
+            flavor, 
+            product.color?product.color:null, 
+            product.decoration, 
+            product.decoration.color?product.decoration.color:null, 
+            product.message, 
+            product.price, 
+            1
+        );
     }
     
     // LocalSortage

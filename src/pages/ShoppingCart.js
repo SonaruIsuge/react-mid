@@ -1,9 +1,7 @@
-import { useContext } from "react";
 import { Layout } from "antd";
 import AppHeader from "../components/Header";
 import AppFooter from "../components/Footer";
-import CartDetail from "../components/CartDetail"
-import { StoreContext } from "../store";
+import CartDetail from "../components/CartDetail";
 
 const { Header, Content, Footer } = Layout;
 

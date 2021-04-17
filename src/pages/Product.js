@@ -13,7 +13,7 @@ export default function Product() {
     const { state: { page: { productCake, productTart, productBrownie } }, dispatch } = useContext(StoreContext);
     useEffect(() => {
         setActiveNavItem(dispatch, "/product");
-    },[])
+    },[]) // eslint-disable-line react-hooks/exhaustive-deps
     return(
         <Layout className="container main-layout">
             <Header className="layout-header">

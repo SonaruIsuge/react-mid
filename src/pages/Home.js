@@ -14,7 +14,7 @@ export default function Home() {
 
     useEffect(() => {
         setActiveNavItem(dispatch, "/");
-    },[])
+    },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
     return(
         <Layout className="container main-layout">

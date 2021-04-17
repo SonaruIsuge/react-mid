@@ -11,7 +11,7 @@ export default function ProductList({ listTitle, id, products, customize, deco }
     useEffect(()=>{        
         let node = document.getElementById(`${id}`);
         calWidthDif(node.scrollWidth - node.clientWidth);
-    },[])
+    },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
     //監聽視窗大小變化
     function ChangeSize(){
@@ -43,7 +43,7 @@ export default function ProductList({ listTitle, id, products, customize, deco }
             return (()=>{
                 window.removeEventListener('resize',onResize)
             })
-        },[])
+        },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
         return size;
     }

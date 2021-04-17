@@ -144,6 +144,7 @@ body {
   width: 4.5rem;
   position: absolute;
   right: 5%;
+  z-index: 10;
 }
 
 .cart-img {
@@ -952,10 +953,10 @@ span.ham-menu-bar3--touch {
 }
 
 .add-to-cart-btn {
-  background-color: #FFFFFF;
+  background-color: #FAA58E;
   border: solid 1px #75645F;
   border-radius: 10px;
-  color: #75645F;
+  color: #FFFFFF;
   height: 3.3125rem;
   width: fit-content;
 }
@@ -966,9 +967,9 @@ span.ham-menu-bar3--touch {
 }
 
 .add-to-cart-btn:focus, .add-to-cart-btn:hover {
-  background-color: #FAA58E;
+  background-color: #FFFFFF;
   border: solid 1px #75645F;
-  color: #FFFFFF;
+  color: #75645F;
 }
 
 @media(max-width: 992px) {
