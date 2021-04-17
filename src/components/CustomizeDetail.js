@@ -100,7 +100,7 @@ export default function CustomizeDetail({product}) {
                 className="customize-preview"
             >
                 <p className="customize-preview-title">PREVIEW</p> 
-                <img alt="product" src={product.image} className="preview-cake-img" />
+                <img alt="product" src={product.imagePreview} className="preview-cake-img" />
             </Col>
             <Col
                 sm={{span: 24}}
@@ -109,6 +109,7 @@ export default function CustomizeDetail({product}) {
             >
                 <p className="customize-options-title">{product.flavor}</p>
                 <ul className="options-block">
+                    {product.color1?(
                     <li className="option customize-color">
                         <p className="option-title">COLOR</p>
                         <div className="option-choose">
@@ -150,6 +151,7 @@ export default function CustomizeDetail({product}) {
                             ))}
                         </Row>
                     </li>
+                    ):(<></>)}
                     <li className="option customize-deco">
                         <p className="option-title">DECORATION</p>
                         <Row className="option-choose">

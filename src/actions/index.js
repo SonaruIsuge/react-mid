@@ -16,6 +16,7 @@ export const addCartItem = (dispatch, product, flavor, color, decoration, messag
     id: product.id,
     category: product.category,
     image: product.image,
+    imagePreview: product.imagePreview,
     flavor,
     color,
     decoration,

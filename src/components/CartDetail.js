@@ -46,7 +46,7 @@ export default function CartDetail() {
                                 lg={{span: 8}}
                                 className="cart-item-img-block"
                             >
-                                <img alt="product-preview" src={item.image} className="cart-item-img" />
+                                <img alt="product-preview" src={item.imagePreview} className="cart-item-img" />
                             </Col>
                             <Col 
                                 sm={{span: 24}}
