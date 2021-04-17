@@ -5,7 +5,7 @@
         "flavor":["BLUEBERRY","APPLE","LEMON","STRAWBERRY"],
         "price":100,
         "image":"/images/home-cake.png",
-        "imagePreview":"/images/home-cake.png",
+        "imagePreview":"/images/preview-cake.png",
         "color":[{
             "id":"74sajz",
             "color": "#FF9D9D"
@@ -26,7 +26,7 @@
         "flavor":["BLUEBERRY","LEMON"],
         "price":90,
         "image":"/images/home-tart.png",
-        "imagePreview":"/images/home-tart.png",
+        "imagePreview":"/images/preview-tart.png",
         "decoration":{
             "id":"0o999t",
             "category":"tart",
@@ -43,7 +43,7 @@
         "flavor":["BLUEBERRY","APPLE","STRAWBERRY"],
         "price":60,
         "image":"/images/home-brownie.png",
-        "imagePreview":"/images/home-brownie.png",
+        "imagePreview":"/images/preview-brownie.png",
         "decoration":{
             "id":"wiqoet",
             "category":"browine",
