@@ -2,6 +2,7 @@ import { useEffect, useContext } from "react";
 import  { Col, Row, Button, Select } from "antd";
 import { StoreContext } from "../store";
 import { addCartItem, removeCartItem } from "../actions";
+import cakeBg from "../images/cake-background.png";
 
 const {Option} = Select;
 
@@ -46,7 +47,13 @@ export default function CartDetail() {
                                 lg={{span: 8}}
                                 className="cart-item-img-block"
                             >
-                                <img alt="product-preview" src={item.imagePreview} className="cart-item-img" />
+                                <img alt="product-preview" src={item.imagePreview} className="cart-item-img"
+                                    style={item.category=="cake"?{
+                                        backgroundImage: `url(${cakeBg}), 
+                                        linear-gradient(${item.color[0]?item.color[0].color:"#FFFFFF"}, ${item.color[1]?item.color[1].color:(item.color[0]?item.color[0].color:"#FFFFFF")}` 
+                                    }:{}}
+                                />
+                                <img alt="product-deco" src={item.decoration.imagePreview} className="cart-item-deco-preview-img" />
                             </Col>
                             <Col 
                                 sm={{span: 24}}

@@ -2,6 +2,7 @@ import { Col, Row, Button, Input, Select } from "antd";
 import { useState, useEffect, useContext } from "react";
 import { StoreContext } from "../store";
 import { addCartItem } from "../actions";
+import cakeBg from "../images/cake-background.png";
 
 const {TextArea} = Input;
 const { Option } = Select;
@@ -64,6 +65,17 @@ export default function CustomizeDetail({product}) {
         addCartItem(dispatch, product, product.flavor[0], chooseColor, chooseDeco, message, totalPrice, qty);
     }
 
+    //Preview顏色顯示
+    const setCakeStyle = () => {
+        if(product.category == "cake") {
+            return ( {
+                backgroundImage: `url(${cakeBg}), 
+                linear-gradient(${chooseColor[0]?chooseColor[0].color:"#FFFFFF"}, ${chooseColor[1]?chooseColor[1].color:(chooseColor[0]?chooseColor[0].color:"#FFFFFF")}` 
+            } ) 
+        }
+        else return ({})
+    }
+
     // LocalSortage
     useEffect(()=>{
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -100,7 +112,9 @@ export default function CustomizeDetail({product}) {
                 className="customize-preview"
             >
                 <p className="customize-preview-title">PREVIEW</p> 
-                <img alt="product" src={product.imagePreview} className="preview-cake-img" />
+                <img alt="product" src={product.imagePreview} className="preview-cake-img" style={setCakeStyle()}/>
+                <img alt="decoration" 
+                    src={chooseDeco.imagePreview} className="deco-preview-img" />
             </Col>
             <Col
                 sm={{span: 24}}

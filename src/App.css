@@ -760,6 +760,11 @@ span.ham-menu-bar3--touch {
 }
 
 .preview-cake-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.preview-cake-img, .deco-preview-img {
   position: absolute;
   width: 80%;
   margin-left: 10%;
@@ -1016,6 +1021,12 @@ span.ham-menu-bar3--touch {
     margin: 1.75rem 20%;
   }
 
+  .deco-preview-img {
+    left: 0;
+    width: 60%;
+    margin: 1.75rem 20%;
+  }
+
   .options-block {
     padding: 0;
   }
@@ -1138,11 +1149,17 @@ span.ham-menu-bar3--touch {
   object-fit: cover;
   margin: auto;
   display: flex;
+  position: relative;
 }
 
 .cart-item-img {
   width: 100%;
   justify-self: center;
+}
+
+.cart-item-deco-preview-img {
+  position: absolute;
+  width: 100%;
 }
 
 .cart-item-block {

@@ -5,7 +5,7 @@
         "flavor":["BLUEBERRY","APPLE","LEMON","STRAWBERRY"],
         "price":100,
         "image":"/images/home-cake.png",
-        "imagePreview":"/images/preview-cake.png",
+        "imagePreview":"/images/cake-empty.png",
         "color":[{
             "id":"74sajz",
             "color": "#FF9D9D"
@@ -43,7 +43,7 @@
         "flavor":["BLUEBERRY","APPLE","STRAWBERRY"],
         "price":60,
         "image":"/images/home-brownie.png",
-        "imagePreview":"/images/preview-brownie.png",
+        "imagePreview":"/images/preview-browine.png",
         "decoration":{
             "id":"wiqoet",
             "category":"browine",
