@@ -13,6 +13,11 @@ export default function ProductItem({widthDif, product, moveStyle, customize}) {
     const addToCart = () => {
         addCartItem(dispatch, product, flavor, product.color?product.color:null, product.decoration, product.message, product.price, 1);
     }
+    
+    // LocalSortage
+    useEffect(()=>{
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }, [cartItems])
 
     useEffect(()=>{
         console.log(cartItems);

@@ -201,10 +201,12 @@ body {
 
   .header-icon {
     position: absolute;
-    height: 100%;
+    height: auto;
+    width: auto;
+    max-width: 15%;
     object-fit: cover;
     margin: 0;
-    left: calc(50% - 50px);
+    left: calc(55% - 56px);
   }
 
   .nav-link {
@@ -470,7 +472,7 @@ span.ham-menu-bar3--touch {
 }
 
 .product-list-title {
-  font-size: 2.875rem;
+  font-size: 2.3rem;
   font-family: "Yu Gothib", serif;
   line-height: 3.875rem;
   color: #75645F;
@@ -878,6 +880,16 @@ span.ham-menu-bar3--touch {
   padding-bottom: 100%;
 }
 
+.deco-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: auto;
+}
+
 .deco-text {
   padding-top: 40%;
   font-size: 1rem;
@@ -1121,9 +1133,16 @@ span.ham-menu-bar3--touch {
   justify-content: space-between;
 }
 
-.cart-item-img {
+.cart-item-img-block {
   width: 76%;
   object-fit: cover;
+  margin: auto;
+  display: flex;
+}
+
+.cart-item-img {
+  width: 100%;
+  justify-self: center;
 }
 
 .cart-item-block {
@@ -1240,12 +1259,13 @@ span.ham-menu-bar3--touch {
 }
 
 .cart-item-deco {
-  width: 4.6875rem;
+  width: 4.6875rem;;
 }
 
 .cart-item-deco-img {
+  width: 100%;  
   border: solid 1px #75645F;
-  border-radius: 10px;
+  border-radius: 10px
 }
 
 .cart-item-deco-text {
@@ -1269,9 +1289,190 @@ span.ham-menu-bar3--touch {
   margin-top: 2.5rem;
 }
 
+/* Total Block */
+.cart-total-block {
+  background-color: #FFD8C3;
+  border-radius: 10px;  
+  width: 84%;
+  margin: 3.5rem auto;
+  color: #75645F;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cart-sub, .cart-ship, .cart-final-total {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 14px auto;
+}
+
+.cart-total-line {
+  width: 90%;
+  margin: auto;
+  border: 0;
+  border-top: solid 6px;
+  border-color: #FFFFFF;
+  border-radius: 13px;
+}
+
+.total-sub-name, .total-ship-name {
+  font-size: 1.5rem;
+}
+
+.total-sub-text, .total-ship-text {
+  font-size: 1.5rem;
+}
+
+.final-total-name {
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+.final-total-text {
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+.cart-check-out-block {
+  width: 84%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.check-out-btn {
+  background-color: #FAA58E;
+  border: solid 1px #75645F;
+  border-radius: 10px;
+  height: 53px;
+  width: 140px;
+  font-size: 1rem;
+}
+
+.check-out-btn:hover, .check-out-btn:focus {
+  border: solid 1px #75645F;
+  background-color: #FFFFFF;
+  color: #75645F;
+}
+
+@media(max-width: 992px) {
+  .cart-item {
+    display: block;
+  }
+
+  .cart-line, .item-line {
+    width: 95%;
+  }
+
+  .cart-item-img-block {
+    width: 50%;
+  }
+
+  .cart-item-block {
+    margin-top: 1.5rem;
+  }
+
+  .cart-item-basic-block {
+    margin: auto;
+  }
+
+  .cart-item-color-block, .cart-item-deco-block,  .cart-item-message-block {
+    margin-left: 10%;
+    max-width: 100%;
+  }
+
+  .cart-item-category {
+    font-size: 1.25rem;
+  }
+
+  .cart-item-flavor {
+    font-size: 1rem;
+  }
+
+  .cart-item-qty-select {
+    width: 15%;
+    font-size: 1.25rem;
+  }
+  
+  .cart-total-block {
+    width: 100%;
+  }
+}
+
 @media(max-width: 768px) {
   .cart-detail {
     display: block;
+  }
+
+  .cart-item-img-block {
+    width: 40%;
+  }
+
+  .cart-item-block {
+    margin-top: 1rem;
+  }
+
+  .cart-item-category {
+    font-size: 1rem;
+  }
+
+  .cart-item-flavor {
+    font-size: 0.75rem;
+  }
+
+  .cart-item-qty-select{
+    width: fit-content;
+  }
+
+  .cart-item-price {
+    width: fit-content;
+    font-size: 1.125rem;
+  }
+
+  .cart-item-remove-btn {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .cart-item-remove-btn div:nth-of-type(1), .cart-item-remove-btn div:nth-of-type(2) {
+    width: 1.5rem;
+  }
+
+  .cart-item-title {
+    font-size: .75rem;
+  }
+
+  .cart-item-color {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .cart-item-deco {
+    width: 3.5rem;
+  }
+
+  .cart-item-deco-text {
+    font-size: 1rem;
+  }
+
+  .cart-total-block {
+    width: 85%;
+  }
+
+  .total-sub-name, .total-ship-name, .total-sub-text, .total-ship-text {
+    font-size: 1.25rem;
+  }
+
+  .final-total-name, .final-total-text {
+    font-size: 1.5rem;
+  }
+
+  .check-out-btn {
+    width: 99px;
+    height: 37px;
+    font-size: .75rem;
   }
 }
 

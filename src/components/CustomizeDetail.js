@@ -64,6 +64,11 @@ export default function CustomizeDetail({product}) {
         addCartItem(dispatch, product, product.flavor[0], chooseColor, chooseDeco, message, totalPrice, qty);
     }
 
+    // LocalSortage
+    useEffect(()=>{
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }, [cartItems])
+
     // Color Debug
     useEffect(()=> {
         console.log(chooseColor);
