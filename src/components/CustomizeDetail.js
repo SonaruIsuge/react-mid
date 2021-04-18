@@ -148,14 +148,11 @@ export default function CustomizeDetail({ product }) {
             <Upload
                 className="deco-upload"
                 name="file" 
-                action="gs://react-mid-d3767.appspot.com"
                 maxCount={1}
-                onChange={()=>{console.log(FileList)}}
             >
                 <Button
                     type="default"
                     className="deco-upload-btn"
-                    // onClick={}
                 >
                     <p>UPLOAD IMAGE</p>
                 </Button>
