@@ -14,13 +14,13 @@ export default function NavBar() {
                 isOnTouch={isOnTouch} 
             />
             <div className="nav-bar collapse-mobile">
-                <NavItem to='/home' className='nav-item' activeClassName='nav-item--active'>
+                <NavItem to='/' className='nav-item' activeClassName='nav-item--active'>
                     HOME
                 </NavItem>
                 <NavItem to='/product' className='nav-item' activeClassName='nav-item--active'>
                     PRODUCT
                 </NavItem>
-                <NavItem to='/' className='nav-item' activeClassName='nav-item--active'>
+                <NavItem to='/aboutUs' className='nav-item' activeClassName='nav-item--active'>
                     ABOUT US
                 </NavItem>
             </div>

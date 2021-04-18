@@ -1581,3 +1581,13 @@ span.ham-menu-bar3--touch {
     font-size: 1rem;
   }
 }
+
+/* Emptyy */
+.ant-empty {
+  margin: 20vh auto;
+}
+
+.ant-empty-description {
+  color: #75645F;
+  font-size: 2vw;
+}
