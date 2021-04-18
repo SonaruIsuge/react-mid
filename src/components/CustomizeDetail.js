@@ -1,9 +1,8 @@
-import { Col, Row, Button, Input, Select, Upload } from "antd";
+import { Col, Row, Button, Input, Select } from "antd";
 import { useState, useEffect, useContext } from "react";
 import { StoreContext } from "../store";
 import { addCartItem } from "../actions";
 import cakeBg from "../images/cake-background.png";
-import { storeData } from "../api";
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -18,6 +17,8 @@ export default function CustomizeDetail({ product }) {
     const [message, setMessage] = useState("");
     const [qty, setQty] = useState(1);
     const [totalPrice, calTotalPrice] = useState(product.price);
+
+    // const [fileList, setFileList] = useState({});
 
     const isMultiColorClick = () => {
         setIsMultipleColor(true);
@@ -55,7 +56,8 @@ export default function CustomizeDetail({ product }) {
         setChooseDeco(deco);
     }
 
-    const onDecoColorClick = (decoInfo) => {
+    // 裝飾 -> Color/Image = decoInfo
+    const onDecoInfoClick = (decoInfo) => {
         setChooseDecoInfo(decoInfo);
     }
 
@@ -120,6 +122,10 @@ export default function CustomizeDetail({ product }) {
         console.log(cartItems);
     }, [cartItems])
 
+    useEffect(()=>{
+        console.log(chooseDecoInfo);
+    }, [chooseDecoInfo])
+
     function addBrowineDecoChoose(){
         if(product.category !== "browine") 
             return null;
@@ -137,7 +143,7 @@ export default function CustomizeDetail({ product }) {
                             id={`browine-${color.id}`}
                             style={{ backgroundColor: `${color.color}` }}
                             type="default"
-                            onClick={() => onDecoColorClick(color)}
+                            onClick={() => onDecoInfoClick(color)}
                         >
                             <p></p>
                         </Button>
@@ -145,18 +151,16 @@ export default function CustomizeDetail({ product }) {
                 ))}
             </Row>
         ):(
-            <Upload
-                className="deco-upload"
-                name="file" 
-                maxCount={1}
-            >
-                <Button
-                    type="default"
-                    className="deco-upload-btn"
-                >
-                    <p>UPLOAD IMAGE</p>
-                </Button>
-            </Upload>
+            <label className="deco-input-label">
+                <input 
+                    type="file" 
+                    className="deco-upload" 
+                    name="file" 
+                    id="input" 
+                    onChange={(val)=>{setChooseDecoInfo(val.target.files)}}
+                />
+                <p>{chooseDecoInfo[0]? chooseDecoInfo[0].name :"UPLOAD IMAGE"}</p>
+            </label>
         ))
     }
 

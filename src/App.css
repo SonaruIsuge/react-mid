@@ -902,30 +902,40 @@ span.ham-menu-bar3--touch {
   font-size: 0.75rem;
 }
 
-.deco-upload {
-  margin: 40%;
-}
-
-.deco-upload-btn {
+.deco-input-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
   background-color:  #FAA58E;
   border: solid 1px #75645F;
   border-radius: 10px;
-  width: 9.625rem;
+  width: 17%;
   height: 3.3125rem;
+  cursor: pointer;
 }
 
-.deco-upload-btn:hover, .deco-upload-btn:focus {
+.deco-upload {
+  opacity: 0;
+}
+
+.deco-input-label:hover, .deco-input-label:focus {
   background-color:#FFFFFF;
   border: solid 1px #75645F;
 }
 
-.deco-upload-btn p {
+.deco-input-label p {
+  position: absolute;
+  text-align: center;
   color: #FFFFFF;
   font-size: 1rem;
   transition: all 0.1s linear;
+  width: 100%;
+  overflow: hidden;
 }
 
-.deco-upload-btn:hover p, .deco-upload-btn:focus p {
+.deco-input-label:hover p, .deco-input-label:focus p {
   color: #75645F;
 }
 
@@ -1001,6 +1011,10 @@ span.ham-menu-bar3--touch {
   .each-deco {
     margin: 1rem auto;
     max-width: 40%;
+  }
+
+  .deco-input-label {
+    width: 30%;
   }
 
   .message-block {
@@ -1100,6 +1114,14 @@ span.ham-menu-bar3--touch {
 
   .deco-text {
     padding-top: 45%;
+  }
+
+  .deco-input-label {
+    height: 3rem;
+  }
+
+  .deco-input-label p {
+    font-size: .75rem;
   }
 
   .total-price-block {
