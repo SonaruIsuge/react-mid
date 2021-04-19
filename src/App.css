@@ -459,6 +459,8 @@ span.ham-menu-bar3--touch {
   margin-top: 7.125rem;
   color: #75645F;
   font-weight: 400;
+  width: 93%;
+  margin: auto;
 }
 
 .list-deco {
@@ -582,8 +584,8 @@ span.ham-menu-bar3--touch {
 
 .product-img {
   width: 100%;
-  min-width: 20vw;
-  min-height: 20vw;
+  min-width: 18vw;
+  min-height: 18vw;
   background-color: #FAA58E;
   border-radius: 5%;
 }
