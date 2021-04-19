@@ -456,6 +456,7 @@ span.ham-menu-bar3--touch {
 }
 
 .product-list {
+  /* background-image: url("/src/images/BG-2.png"); */
   text-align: center;
   margin-top: 7.125rem;
   color: #75645F;
