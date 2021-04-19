@@ -452,8 +452,6 @@ span.ham-menu-bar3--touch {
 .product-title-block {
   display: flex;
   position: relative;
-  padding-top: 5%;
-  justify-content: center;
 }
 
 .product-list {
