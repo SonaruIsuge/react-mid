@@ -70,7 +70,7 @@ export default function ProductList({ listTitle, id, products, customize, deco }
     };
 
     return (
-        <div className="product-list">
+        <div className={`product-list ${id}`}>
             <div className="product-title-block">
                 <img src={deco} alt="deco" className={`list-deco ${deco ? "" : "list-deco--hide"}`}></img>
                 <p className="product-list-title">{listTitle}</p>

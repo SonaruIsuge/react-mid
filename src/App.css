@@ -465,6 +465,10 @@ span.ham-menu-bar3--touch {
   margin: auto;
 }
 
+.bs {
+  background-image: url(./images/BG-2.png);
+}
+
 .list-deco {
   position: absolute;
   width: 5.3125rem;
