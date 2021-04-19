@@ -1,17 +1,18 @@
+import { notification } from "antd";
 import {
-    SET_NAVBAR_ACTIVEITEM,
-    ADD_CART_ITEM,
-    REMOVE_CART_ITEM
-} from "../utils/constants"
+  SET_NAVBAR_ACTIVEITEM,
+  ADD_CART_ITEM,
+  REMOVE_CART_ITEM,
+} from "../utils/constants";
 
 export const setActiveNavItem = (dispatch, activeNavItem) => {
-    dispatch({
-        type: SET_NAVBAR_ACTIVEITEM,
-        payload: activeNavItem,
-    });
-}
+  dispatch({
+    type: SET_NAVBAR_ACTIVEITEM,
+    payload: activeNavItem,
+  });
+};
 
-export const addCartItem = (dispatch, product, flavor, color, decoration, decoInfo, message, price, qty) => {
+export const addCartItem = ( dispatch, product, flavor, color, decoration, decoInfo, message, price, qty) => {
   const item = {
     id: product.id,
     category: product.category,
@@ -44,4 +45,17 @@ export const removeCartItem = (dispatch, productId) => {
     type: REMOVE_CART_ITEM,
     payload: productId,
   });
-}
+};
+
+export const openNotification = () => {
+  notification.open({
+    message: "",
+    description: "Success to add in shopping cart !",
+    onClick: () => {
+      console.log("Notification Clicked!");
+    },
+    placement: "topRight",
+    className: "notification",
+    duration: 2.5
+  });
+};

@@ -1,7 +1,7 @@
 import { Col, Row, Button, Input, Select } from "antd";
 import { useState, useEffect, useContext } from "react";
 import { StoreContext } from "../store";
-import { addCartItem } from "../actions";
+import { addCartItem, openNotification } from "../actions";
 import cakeBg from "../images/cake-background.png";
 
 const { TextArea } = Input;
@@ -13,10 +13,11 @@ export default function CustomizeDetail({ product }) {
     const [isMultipleColor, setIsMultipleColor] = useState(false);
     const [chooseColor, setChooseColor] = useState([customizeColor[0]]);
     const [chooseDeco, setChooseDeco] = useState((customizeDecoration.filter(x => x.category === product.category))[0]);
-    const [chooseDecoInfo, setChooseDecoInfo] = useState(product.category==="browine"?customizeColor[0]:{});
+    const [chooseDecoInfo, setChooseDecoInfo] = useState(product.category==="browine"?customizeColor[0]:null);
     const [message, setMessage] = useState("");
     const [qty, setQty] = useState(1);
     const [totalPrice, calTotalPrice] = useState(product.price);
+    const [warnText, setWarnText] = useState("");
 
     // const [fileList, setFileList] = useState({});
 
@@ -70,16 +71,30 @@ export default function CustomizeDetail({ product }) {
     }, [product.price, isMultipleColor, chooseDeco.price])
 
     const addToCart = () => {
-        addCartItem(
-            dispatch, 
-            product, 
-            product.flavor[0], 
-            product.category === "cake" ? chooseColor : null, 
-            chooseDeco, 
-            chooseDecoInfo, 
-            message, 
-            totalPrice, 
-            qty);
+        if(product.category === "cake" && isMultipleColor && chooseColor.length < 2)
+            setWarnText("Please Choose Two Colors");
+        else if (product.category === "cake" && !isMultipleColor && chooseColor.length < 1)
+            setWarnText("Please Choose One Color");
+        else if (product.category === "browine" && chooseDeco.text === "COLOR" && !chooseDecoInfo.color)
+            setWarnText("Please Choose One Color");
+        else if (product.category === "browine" && chooseDeco.text === "IMAGE" && !chooseDecoInfo[0])
+            setWarnText("Please Upload One Image");
+        
+        else {
+            setWarnText("");
+            openNotification();
+            addCartItem(
+                dispatch, 
+                product, 
+                product.flavor[0], 
+                product.category === "cake" ? chooseColor : null, 
+                chooseDeco, 
+                chooseDecoInfo, 
+                message, 
+                totalPrice, 
+                qty
+            );
+        }
     }
 
     //Preview顏色顯示
@@ -99,33 +114,31 @@ export default function CustomizeDetail({ product }) {
     }, [cartItems])
 
     // Color Debug
-    useEffect(() => {
-        console.log(chooseColor);
-    }, [chooseColor])
-
+    useEffect(() => { console.log(chooseColor); }, [chooseColor])
     // Decoration Debug
-    useEffect(() => {
-        console.log(chooseDeco);
-    }, [chooseDeco])
-
+    useEffect(() => { console.log(chooseDeco); }, [chooseDeco])
     // Message Debug
-    useEffect(() => {
-        console.log(message)
-    }, [message])
-
+    useEffect(() => { console.log(message) }, [message])
     // Total Price Debug
-    useEffect(() => {
-        console.log(totalPrice);
-    }, [totalPrice])
+    useEffect(() => { console.log(totalPrice); }, [totalPrice])
+    // cartItem Deebug
+    useEffect(() => { console.log(cartItems); }, [cartItems])
+    // decoInfo Debug
+    useEffect(()=>{ console.log(chooseDecoInfo); }, [chooseDecoInfo])
 
-    useEffect(() => {
-        console.log(cartItems);
-    }, [cartItems])
+    // 預覽圖片
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = (e) => {
+                document.getElementById("blah").src = e.target.result;
+            }
+            reader.readAsDataURL(input.files[0]); // convert to base64 string
+        }
+    }
 
-    useEffect(()=>{
-        console.log(chooseDecoInfo);
-    }, [chooseDecoInfo])
-
+    // add decoChoose when category is browine
     function addBrowineDecoChoose(){
         if(product.category !== "browine") 
             return null;
@@ -151,16 +164,19 @@ export default function CustomizeDetail({ product }) {
                 ))}
             </Row>
         ):(
-            <label className="deco-input-label">
-                <input 
-                    type="file" 
-                    className="deco-upload" 
-                    name="file" 
-                    id="input" 
-                    onChange={(val)=>{setChooseDecoInfo(val.target.files)}}
-                />
-                <p>{chooseDecoInfo[0]? chooseDecoInfo[0].name :"UPLOAD IMAGE"}</p>
-            </label>
+            <div className="deco-input">
+                <label className="deco-input-label">
+                    <input 
+                        type="file" 
+                        className="deco-upload" 
+                        name="file" 
+                        id="input" 
+                        onChange={(val)=>{setChooseDecoInfo(val.target.files); readURL(val.target)}}
+                    />
+                    <p>{chooseDecoInfo[0]? chooseDecoInfo[0].name :"UPLOAD IMAGE"}</p>
+                </label>
+                <img id="blah" src="#" alt="" className="deco-upload-preview"/>
+            </div>
         ))
     }
 
@@ -299,6 +315,7 @@ export default function CustomizeDetail({ product }) {
                                 >
                                     ADD TO CART
                                 </Button>
+                                <p className="warn-text">{warnText}</p>
                             </div>
                         </div>
                     </li>

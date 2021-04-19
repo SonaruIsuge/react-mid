@@ -902,12 +902,17 @@ span.ham-menu-bar3--touch {
   font-size: 0.75rem;
 }
 
+.deco-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .deco-input-label {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: auto;
   background-color:  #FAA58E;
   border: solid 1px #75645F;
   border-radius: 10px;
@@ -918,6 +923,11 @@ span.ham-menu-bar3--touch {
 
 .deco-upload {
   opacity: 0;
+}
+
+.deco-upload-preview {
+  margin-left: 5%;
+  width: 10%;
 }
 
 .deco-input-label:hover, .deco-input-label:focus {
@@ -1005,6 +1015,13 @@ span.ham-menu-bar3--touch {
   background-color: #FFFFFF;
   border: solid 1px #75645F;
   color: #75645F;
+}
+
+.warn-text {
+  position: absolute;
+  color: red;
+  font-size: 1rem;
+  bottom: 1rem;
 }
 
 @media(max-width: 992px) {
@@ -1590,4 +1607,19 @@ span.ham-menu-bar3--touch {
 .ant-empty-description {
   color: #75645F;
   font-size: 2vw;
+}
+
+/* notification */
+
+.notification {
+  width: 393px;
+  display: flex;
+  align-items: center;
+  background-color: #FFF7F3;
+  opacity: 83%;
+  border-radius: 10px;
+}
+
+.ant-notification-notice-description {
+  font-size: 1.3125rem;
 }

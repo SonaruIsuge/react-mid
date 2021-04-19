@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { Select, Button } from 'antd';
-import { addCartItem } from "../actions";
+import { addCartItem, openNotification } from "../actions";
 import { StoreContext } from "../store";
 
 const { Option } = Select;
@@ -11,6 +11,7 @@ export default function ProductItem({widthDif, product, moveStyle, customize}) {
     const [flavor, setFlavor] = useState(product.flavor.length > 1 ? product.flavor[0] : product.flavor);
 
     const addToCart = () => {
+        openNotification();
         addCartItem(
             dispatch, 
             product, 
