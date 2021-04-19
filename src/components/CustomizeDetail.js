@@ -1,7 +1,7 @@
 import { Col, Row, Button, Input, Select } from "antd";
 import { useState, useEffect, useContext } from "react";
 import { StoreContext } from "../store";
-import { addCartItem, openNotification } from "../actions";
+import { addCartItem, openNotification, readURL } from "../actions";
 import cakeBg from "../images/cake-background.png";
 
 const { TextArea } = Input;
@@ -14,6 +14,7 @@ export default function CustomizeDetail({ product }) {
     const [chooseColor, setChooseColor] = useState([customizeColor[0]]);
     const [chooseDeco, setChooseDeco] = useState((customizeDecoration.filter(x => x.category === product.category))[0]);
     const [chooseDecoInfo, setChooseDecoInfo] = useState(product.category==="browine"?customizeColor[0]:null);
+    const [imgUrl, setImgUrl] = useState("");
     const [message, setMessage] = useState("");
     const [qty, setQty] = useState(1);
     const [totalPrice, calTotalPrice] = useState(product.price);
@@ -90,6 +91,7 @@ export default function CustomizeDetail({ product }) {
                 product.category === "cake" ? chooseColor : null, 
                 chooseDeco, 
                 chooseDecoInfo, 
+                imgUrl,
                 message, 
                 totalPrice, 
                 qty
@@ -125,14 +127,17 @@ export default function CustomizeDetail({ product }) {
     useEffect(() => { console.log(cartItems); }, [cartItems])
     // decoInfo Debug
     useEffect(()=>{ console.log(chooseDecoInfo); }, [chooseDecoInfo])
+    // decoImgUrl Debug
+    useEffect(()=>{ console.log(imgUrl); }, [imgUrl])
 
     // 預覽圖片
-    function readURL(input) {
+    const readURL = (input, id) => {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             
             reader.onload = (e) => {
-                document.getElementById("blah").src = e.target.result;
+                document.getElementById(id).src = e.target.result;
+                setImgUrl(e.target.result)
             }
             reader.readAsDataURL(input.files[0]); // convert to base64 string
         }
@@ -171,7 +176,7 @@ export default function CustomizeDetail({ product }) {
                         className="deco-upload" 
                         name="file" 
                         id="input" 
-                        onChange={(val)=>{setChooseDecoInfo(val.target.files); readURL(val.target)}}
+                        onChange={(val)=>{setChooseDecoInfo(val.target.files); readURL(val.target, "blah")}}
                     />
                     <p>{chooseDecoInfo[0]? chooseDecoInfo[0].name :"UPLOAD IMAGE"}</p>
                 </label>

@@ -1,7 +1,7 @@
 import { useEffect, useContext } from "react";
 import  { Col, Row, Button, Select } from "antd";
 import { StoreContext } from "../store";
-import { addCartItem, removeCartItem } from "../actions";
+import { addCartItem, removeCartItem, readURL } from "../actions";
 import cakeBg from "../images/cake-background.png";
 
 const {Option} = Select;
@@ -101,6 +101,18 @@ export default function CartDetail() {
                                                 <img alt="decoration" src={item.decoration.image} className="cart-item-deco-img" />
                                             ):(
                                                 <p className="cart-item-deco-text">{item.decoration.text}</p>
+                                            )}
+                                        </div>
+                                        <div className="cart-deco-info">
+                                            {item.category==="browine"?(
+                                                <>
+                                                    {item.decoration.text==="COLOR"?(
+                                                        <div className="cart-item-color" style={{backgroundColor:`${item.decoration.info.color}`}}></div>
+                                                    ):(
+                                                        <img src={item.decoration.uploadImageUrl} alt="info-img-preview" className="cart-item-img-preview"/>)}
+                                                </>
+                                            ):(
+                                                <></>
                                             )}
                                         </div>
                                     </div>

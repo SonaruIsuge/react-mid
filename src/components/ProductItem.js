@@ -18,7 +18,8 @@ export default function ProductItem({widthDif, product, moveStyle, customize}) {
             flavor, 
             product.color?product.color:null, 
             product.decoration, 
-            product.decoration.color?product.decoration.color:null, 
+            product.decoration.color?product.decoration.color:null,
+            null, 
             product.message, 
             product.price, 
             1
